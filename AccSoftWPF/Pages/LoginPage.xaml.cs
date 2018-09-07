@@ -18,8 +18,9 @@ namespace AccSoftWPF
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            this.FadeOut();
-            //IOCContainer.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.Dashboard;
+            //this.FadeOut();
+            IOCContainer.Get<ApplicationViewModel>().SideMenuVisible ^= true;
+            IOCContainer.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.Dashboard;
         }
     }
 }
