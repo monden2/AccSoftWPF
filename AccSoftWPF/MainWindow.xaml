@@ -1,8 +1,6 @@
 ﻿<Window x:Class="AccSoftWPF.MainWindow" 
-        xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" 
         xmlns:local="clr-namespace:AccSoftWPF"
         Title="MainWindow" 
         x:Name="MainAppWindow"
@@ -78,7 +76,7 @@
                                             </Grid.ColumnDefinitions>
                                             <!--<local:SideMenu local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.SideMenuVisible, 
                                                             Source={x:Static local:ViewModelLocator.Instance}}"/>-->
-                                            <local:SideMenu local:AnimateSlideInFromLeftProperty.Value="false"/>
+                                            <local:SideMenu/>
                                             <ContentPresenter 
                                                 Grid.Column="1"
                                                 Content="{TemplateBinding Content}"/>

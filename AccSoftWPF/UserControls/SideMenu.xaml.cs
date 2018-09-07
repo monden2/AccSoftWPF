@@ -74,10 +74,22 @@ namespace AccSoftWPF
                                 : Visibility.Visible;
         }
 
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            var MainWindow = Window.GetWindow(this);
+            MainWindow.Close();
+        }
+
+
         private void Dashboard_Click(object sender, RoutedEventArgs e)
         {
             CollapseAll();
             IOCContainer.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Dashboard);
+        }
+
+        private void CMDCreate_Click(object sender, RoutedEventArgs e)
+        {
+            IOCContainer.Get<ApplicationViewModel>().GoToPage(ApplicationPage.CMDCreate);
         }
 
         private void Invoice_Click(object sender, RoutedEventArgs e)
@@ -85,15 +97,5 @@ namespace AccSoftWPF
             CollapseAll();
         }
 
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            var MainWindow = Window.GetWindow(this);
-            MainWindow.Close();
-        }
-
-        private void CMDCreate_Click(object sender, RoutedEventArgs e)
-        {
-            IOCContainer.Get<ApplicationViewModel>().GoToPage(ApplicationPage.CMDCreate);
-        }
     }
 }

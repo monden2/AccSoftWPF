@@ -1,7 +1,4 @@
-﻿using System;
-using System.Windows;
-
-namespace AccSoftWPF.Core
+﻿namespace AccSoftWPF.Core
 {
     public class ApplicationViewModel : BaseViewModel
     {
@@ -12,7 +9,6 @@ namespace AccSoftWPF.Core
         public void GoToPage(ApplicationPage page)
         {
             CurrentPage= page;
-
             SideMenuVisible = page == ApplicationPage.Dashboard;
         }
     }

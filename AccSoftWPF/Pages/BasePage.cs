@@ -13,7 +13,7 @@ namespace AccSoftWPF
         /// <summary>
         /// Define public variable PageLoadAnimation as new PageAnimation, and get/set value as SlideOutFromRight
         /// </summary>
-        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideInFromRight;
+        public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.FadeIn;
 
         /// <summary>
         /// Define public variable PageUnloadAnimation as new PageAnimation, and get/set value as FadeOut
@@ -50,19 +50,19 @@ namespace AccSoftWPF
 
         private async void BasePage_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            await SlideInFromRight();
+            await FadeIn();
         }
 
-        public async Task SlideInFromRight()
+        public async Task FadeIn()
         {
             if (this.PageLoadAnimation == PageAnimation.None)
                 return;
 
             switch (this.PageLoadAnimation)
             {
-                case PageAnimation.SlideInFromRight:
+                case PageAnimation.FadeIn:
 
-                    await this.SlideInFromRight(SlideSecondsIn);
+                    await this.FadeIn(SlideSecondsIn);
 
                     break;
             }
