@@ -76,8 +76,9 @@
                                                 <ColumnDefinition Width="Auto"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-                                            <local:SideMenu local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.SideMenuVisible, 
-                                                            Source={x:Static local:ViewModelLocator.Instance}}"/>
+                                            <!--<local:SideMenu local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.SideMenuVisible, 
+                                                            Source={x:Static local:ViewModelLocator.Instance}}"/>-->
+                                            <local:SideMenu local:AnimateSlideInFromLeftProperty.Value="false"/>
                                             <ContentPresenter 
                                                 Grid.Column="1"
                                                 Content="{TemplateBinding Content}"/>

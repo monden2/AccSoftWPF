@@ -5,8 +5,15 @@ namespace AccSoftWPF.Core
 {
     public class ApplicationViewModel : BaseViewModel
     {
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Login;
 
         public bool SideMenuVisible { get; set; } = false;
+
+        public void GoToPage(ApplicationPage page)
+        {
+            CurrentPage= page;
+
+            SideMenuVisible = page == ApplicationPage.Dashboard;
+        }
     }
 }

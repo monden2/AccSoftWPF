@@ -77,7 +77,7 @@ namespace AccSoftWPF
         private void Dashboard_Click(object sender, RoutedEventArgs e)
         {
             CollapseAll();
-            IOCContainer.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.Dashboard;
+            IOCContainer.Get<ApplicationViewModel>().GoToPage(ApplicationPage.Dashboard);
         }
 
         private void Invoice_Click(object sender, RoutedEventArgs e)
@@ -93,7 +93,7 @@ namespace AccSoftWPF
 
         private void CMDCreate_Click(object sender, RoutedEventArgs e)
         {
-            IOCContainer.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.CMDCreate;
+            IOCContainer.Get<ApplicationViewModel>().GoToPage(ApplicationPage.CMDCreate);
         }
     }
 }
